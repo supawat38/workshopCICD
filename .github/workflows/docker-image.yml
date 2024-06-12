@@ -30,10 +30,3 @@ jobs:
         run: docker rm -f nodejs-app-container 
       - name: Run docker container
         run: docker run -d -p 8000:8000 --name nodejs-app-container supawat38/workshop_cicd
-        
-        
-        
-        
-          
-      - name: Run docker container
-        run: docker run -d -p 8000:8000 supawat38/workshop_cicd
