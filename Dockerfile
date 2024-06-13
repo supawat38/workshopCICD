@@ -15,7 +15,7 @@ RUN npm install
 COPY index.js ./
 
 # ทำการปล่อย port 8000 ออกมาให้ access ได้
-EXPOSE 8000
+EXPOSE 8099
 
 # กำหนด command สำหรับเริ่มต้น run application (ตอน run container)
 CMD ["node", "index.js"]
