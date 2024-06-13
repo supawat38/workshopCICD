@@ -20,13 +20,13 @@ jobs:
       - name: Publish image to docker hub
         run: docker push supawat38/workshop_cicd:latest
         
-  deploy:
-    needs: build
-    runs-on: self-hosted
-    steps:
-      - name: Pull image from docker hub
-        run: docker pull supawat38/workshop_cicd:latest
-      - name: Delete old container
-        run: docker rm -f nodejs-app-container 
-      - name: Run docker container
-        run: docker run -d -p 8000:8000 --name nodejs-app-container supawat38/workshop_cicd
+  # deploy:
+  #   needs: build
+  #   runs-on: self-hosted
+  #   steps:
+  #     - name: Pull image from docker hub
+  #       run: docker pull supawat38/workshop_cicd:latest
+  #     - name: Delete old container
+  #       run: docker rm -f nodejs-app-container 
+  #     - name: Run docker container
+  #       run: docker run -d -p 8000:8000 --name nodejs-app-container supawat38/workshop_cicd
