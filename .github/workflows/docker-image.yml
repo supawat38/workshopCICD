@@ -19,6 +19,8 @@ jobs:
         run: docker build -t supawat38/workshop_cicd .  
       - name: Publish image to docker hub
         run: docker push supawat38/workshop_cicd:latest
+      - name: Start Testapp Container
+        run: docker run -d -p 8099:8099 --name ContainersName supawat38/workshop_cicd
         
   # deploy:
   #   needs: build
